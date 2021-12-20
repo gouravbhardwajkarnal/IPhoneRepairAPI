@@ -21,4 +21,11 @@ namespace IPhoneRepairAPI.Models
         public string MenuUrl { get; set; }
         public string Iuser { get; set; }
     }
+
+    public class AdminList
+    {
+        public int AutoId { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+    }
 }
