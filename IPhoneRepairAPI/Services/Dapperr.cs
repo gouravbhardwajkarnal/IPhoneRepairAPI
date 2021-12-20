@@ -24,9 +24,10 @@ namespace IPhoneRepairAPI.Services
 
         }
 
-        public int Execute(string sp, DynamicParameters parms, CommandType commandType = CommandType.StoredProcedure)
+        public string Execute(string sp, DynamicParameters parms, CommandType commandType = CommandType.StoredProcedure)
         {
-            throw new NotImplementedException();
+            using IDbConnection db = new SqlConnection(_config.GetConnectionString(Connectionstring));
+            return db.Query(sp, parms, commandType: commandType).FirstOrDefault();
         }
 
         public T Get<T>(string sp, DynamicParameters parms, CommandType commandType = CommandType.Text)

@@ -13,7 +13,8 @@ namespace IPhoneRepairAPI.Models
         public string Email { get; set; }
         public string Query { get; set; }
         public string Location { get; set; }
-        public string Repair_type { get; set; }    
+        public string Repair_type { get; set; }
+        public string QueryType { get; set; }
 
     }
 }
