@@ -40,7 +40,7 @@ namespace IPhoneRepairAPI.Controllers
         [HttpGet(nameof(GetALL))]
         public async Task <IEnumerable<Quote_Contact>> GetALL()
         {
-            var result = await Task.FromResult(_dapper.GetAll<Quote_Contact>($"Select * from Quote_contact", null, commandType: CommandType.Text));
+            var result = await Task.FromResult(_dapper.GetAll<Quote_Contact>($"Select * from Quote_contact order by idate desc", null, commandType: CommandType.Text));
             return result;
         }
 

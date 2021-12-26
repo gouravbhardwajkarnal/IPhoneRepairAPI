@@ -15,6 +15,7 @@ namespace IPhoneRepairAPI.Models
         public string Location { get; set; }
         public string Repair_type { get; set; }
         public string QueryType { get; set; }
+        public DateTime idate { get; set; }
 
     }
 }
